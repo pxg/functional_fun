@@ -1,6 +1,11 @@
 You will need the Haskell platform installed <https://www.haskell.org/platform/>.
 
-To compile
+To compile:
 ```
-ghc -o hello hello.hs
+ghc -o how_old_am_i how_old_am_i.hs
+```
+
+To run:
+```
+./how_old_am_i
 ```
