@@ -1,9 +1,16 @@
 {-#LANGUAGE ScopedTypeVariables#-}
-how_old n True = 2016 - n - 1
-how_old n False = 2016 - n
+import Data.Time.Clock
+import Data.Time.Calendar
+
+
+how_old current_year year_of_birth True = current_year - year_of_birth - 1
+how_old current_year year_of_birth False = current_year - year_of_birth
 
 after_today ['y'] = True
 after_today n = False
+
+date :: IO (Integer,Int,Int) -- :: (year,month,day)
+date = getCurrentTime >>= return . toGregorian . utctDay
 
 
 main = do
@@ -15,6 +22,10 @@ main = do
 
     putStrLn "Where you born after May 22nd? Answer 'y' for yes"
     date_input <- getLine
-    let date = after_today(date_input)
+    -- can this be called with alternative syntax?
+    let dob_after_today = after_today(date_input)
 
-    print (how_old year_of_birth date)
+    (year, month, day) <- date
+    let current_year = fromIntegral year -- year is an Int not an Integer
+
+    print (how_old current_year year_of_birth dob_after_today)
