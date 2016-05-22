@@ -22,8 +22,7 @@ main = do
 
     putStrLn "Where you born after May 22nd? Answer 'y' for yes"
     date_input <- getLine
-    -- can this be called with alternative syntax?
-    let dob_after_today = after_today(date_input)
+    let dob_after_today = after_today date_input
 
     (year, month, day) <- date
     let current_year = fromIntegral year -- year is an Int not an Integer
