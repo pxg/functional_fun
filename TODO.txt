@@ -1,6 +1,0 @@
-#How old am I?
-
-3. Ask if user was born after May 22nd
-4. Dynamically get today's date
-5. Have use input full date of birth as input
-6. Return how old the user is in years, months, days and seconds
