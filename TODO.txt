@@ -1,6 +1,5 @@
 #How old am I?
 
-0. Print 32
 1. "Variable" 1983 and 2014 return result
 2. Take 1983 as user typed input
 3. Ask if user was born after May 22nd
