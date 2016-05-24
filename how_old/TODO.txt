@@ -1,6 +1,5 @@
 #How old am I?
 
-1. Dynamically get today's date
-2. Have use input full date of birth as input
-3. Return how old the user is in years, months, days and seconds
-4. How to add a unit test?
+1. Have use input full date of birth as input
+2. Return how old the user is in years, months, days and seconds
+3. Add a unit tests
