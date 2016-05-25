@@ -1,3 +1,5 @@
+module Fizzbuzz where
+
 fizz x = x `mod` 3 == 0
 buzz x = x `mod` 5 == 0
 fizzbuzz x = if (fizz x && buzz x)
