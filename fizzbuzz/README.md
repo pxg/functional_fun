@@ -1,8 +1,10 @@
-## Compiling
+## Compiling and running
 ```
+ghc -o Fizzbuzz Main.hs
+./Fizzbuzz
 ```
 
 ## Running the tests
 ```
-runghc tests.hs
+runghc Tests.hs
 ```

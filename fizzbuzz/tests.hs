@@ -1,7 +1,7 @@
 module Main where
 
 import Test.HUnit
-import Fizzbuzz hiding (main)
+import Fizzbuzz
 
 
 derp_1 = test [
