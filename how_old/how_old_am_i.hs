@@ -20,6 +20,7 @@ main = do
     -- Casting technique from http://stackoverflow.com/questions/11481306/haskell-how-to-parse-an-io-input-string-into-a-float-or-int-or-whatever
     let year_of_birth = read year_input :: Int
 
+    -- should be dynamic
     putStrLn "Where you born after May 22nd? Answer 'y' for yes"
     date_input <- getLine
     let dob_after_today = after_today date_input
