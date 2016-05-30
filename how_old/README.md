@@ -4,12 +4,12 @@ You will need the Haskell platform installed <https://www.haskell.org/platform/>
 ## V1
 To compile:
 ```
-ghc -o how_old_am_i how_old_am_i.hs
+ghc -o How_old Main.hs
 ```
 
 To run:
 ```
-./how_old_am_i
+./How_old
 ```
 
 ## V2
