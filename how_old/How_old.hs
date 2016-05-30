@@ -13,10 +13,11 @@ date_parse x = do
 
 -- TODO: get function signature
 age_from_date (dob_y, dob_m, dob_d) (today_y, today_m, today_d)
-    | dob_m < today_m = today_y - dob_y
-    | dob_m == today_m = if (dob_d > today_d) then today_y - dob_y - 1 else (today_y - dob_y)
-    | dob_m > today_m = today_y - dob_y - 1
--- TODO: use where for today_y - dob_y "difference_year"
+    | dob_m < today_m = diff_year
+    | dob_m == today_m = if (dob_d > today_d) then diff_year - 1 else diff_year
+    | dob_m > today_m = diff_year - 1
+    where diff_year = today_y - dob_y
+
 
 bmiTell :: (RealFloat a) => a -> String
 bmiTell bmi
