@@ -1,14 +1,14 @@
 module How_old where
 import Data.List.Split
-import Data.Time.Clock  -- needed?
-import Data.Time.Calendar  -- needed?
+import Data.Time.Calendar
+import Data.Time.Clock
 
 
-today :: IO (Integer,Int,Int) -- :: (year,month,day)
+today :: IO (Integer, Int, Int)
 today = getCurrentTime >>= return . toGregorian . utctDay
 
 
--- TODO: get function signature
+date_parse :: Num t => [Char] -> (t, Int, Int)
 date_parse x = do
     let dates = splitOn "-" x
     -- TODO: Need to check length of dates here
@@ -18,7 +18,7 @@ date_parse x = do
     (year, int_dates !! 1, int_dates !! 2)
 
 
--- TODO: get function signature
+age_from_date :: (Num t, Ord a, Ord a1) => (t, a1, a) -> (t, a1, a) -> t
 age_from_date (dob_y, dob_m, dob_d) (today_y, today_m, today_d)
     | dob_m < today_m = diff_year
     | dob_m == today_m = if (dob_d > today_d) then diff_year - 1 else diff_year
